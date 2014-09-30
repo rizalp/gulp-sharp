@@ -13,6 +13,7 @@
   "keywords": [
     "gulp",
     "gulp-sharp",
+    "gulpplugin",
     "sharp",
     "jpeg",
     "png",
