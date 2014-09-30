@@ -1,0 +1,46 @@
+{
+  "name": "gulp-sharp",
+  "version": "0.0.1",
+  "description": "Gulp plugin to resize image using sharp (libvips binding for nodejs)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rizalp/gulp-sharp.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulp-sharp",
+    "sharp",
+    "jpeg",
+    "png",
+    "webp",
+    "tiff",
+    "resize",
+    "thumbnail",
+    "sharpen",
+    "crop",
+    "embed",
+    "libvips",
+    "vips",
+    "fast",
+    "buffer",
+    "stream"
+  ],
+  "author": "Mohammad Shahrizal Prabowo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rizalp/gulp-sharp/issues"
+  },
+  "homepage": "https://github.com/rizalp/gulp-sharp",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "event-stream": "^3.1.7",
+    "lodash": "^2.4.1",
+    "sharp": "^0.6.2"
+  }
+}

@@ -1,0 +1,38 @@
+{
+    "maxerr"        : 20,
+
+    "bitwise"       : true,
+    "camelcase"     : true,
+    "curly"         : true,
+    "eqeqeq"        : true,
+    "forin"         : true,
+    "immed"         : true,
+    "latedef"       : "nofunc",
+    "newcap"        : true,
+    "noarg"         : true,
+    "nonew"         : true,
+    "undef"         : true,
+    "unused"        : true,
+    "strict"        : false,
+
+    "asi"           : false,
+    "boss"          : false,
+    "eqnull"        : true,
+    "moz"           : false,
+    "evil"          : false,
+    "funcscope"     : true,
+    "iterator"      : false,
+    "lastsemic"     : true,
+    "laxbreak"      : false,
+    "laxcomma"      : false,
+    "loopfunc"      : false,
+    "multistr"      : false,
+    "scripturl"     : false,
+    "shadow"        : false,
+    "supernew"      : true,
+
+    "browser"       : true,
+    "browserify"    : true,
+    "devel"         : true,
+    "node"          : true
+}
