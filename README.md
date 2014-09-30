@@ -189,7 +189,7 @@ Optional. Use progressive (interlace) scan for JPEG and PNG output. This typical
 
 Type: `Number`; Default: `6`; Possible Value: Number between `-1` and `9`
 
-Optional. An advanced setting for the zlib compression level of the lossless PNG output format. The default level is 6.
+Optional. An advanced setting for the zlib compression level of the lossless PNG output format. The default level is 6. This property is ignored if image input is not `png`
 
 ### options.output
 
