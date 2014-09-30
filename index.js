@@ -52,12 +52,12 @@ var createSharpPipeline = function( opts ) {
     (getRotate(opts.rotate)) ? getRotate(opts.rotate) : undefined,
 
     (opts.sharpen) ? ['sharpen', undefined ] : undefined,
-    (_.isNumber(opts.gamma)) ? ['gamma', opts.gamma ] : undefined,
+    (opts.gamma) ? ['gamma', opts.gamma ] : undefined,
     (opts.grayscale) ? ['grayscale', undefined] : undefined,
     (opts.withMetadata) ? ['withMetadata', undefined] : undefined,
-    (_.isNumber(opts.quality)) ? ['quality', opts.quality] : undefined,
+    (opts.quality) ? ['quality', opts.quality] : undefined,
     (opts.progressive) ? ['progressive', undefined] : undefined,
-    (_.isNumber(opts.compressionLevel)) ? ['compressionLevel', opts.compressionLevel] : undefined
+    (opts.compressionLevel) ? ['compressionLevel', opts.compressionLevel] : undefined
   ];
 
   // remove task that is undefined
@@ -111,13 +111,13 @@ var gulpSharp = function( options ) {
     withoutEnlargement : true,
     sharpen : false,
     interpolateWith : '', // [nearest, bilinear, bicubic, vertexSplitQuadraticBasisSpline, locallyBoundedBicubic, nohalo]
-    gamma : 0, // if present, is a Number betweem 1 and 3. The default value is 2.2, a suitable approximation for sRGB images.
+    gamma : false, // if present, is a Number betweem 1 and 3. The default value is 2.2, a suitable approximation for sRGB images.
     grayscale : false,
     output : '', // string of extension without dot ('.'). either ["jpeg", "png", "webp"]
-    quality : 80, // only applies JPEG, WebP and TIFF
+    quality : false, // only applies JPEG, WebP and TIFF
     progressive : false,
     withMetadata : false,
-    compressionLevel : 6 // only apply to png
+    compressionLevel : false // only apply to png
   };
 
   var mergedOptions = _.merge(DEFAULT, options);
