@@ -6,15 +6,15 @@
 ## Prerequisites
 
 * Node.js v0.10+
-* libvips v7.38.5+
+* libvips v8.0+
 
-On Ubuntu 14.04, installing libvips is as easy as :
+On Ubuntu 14.x and 15.04 the default libvips package is not compatible with versions of Sharp.
 
-```
-sudo apt-get install libvips-dev
-```
+To manually install VIPS from source, follow the instructions at [Build VIPS on Ubuntu](http://www.vips.ecs.soton.ac.uk/index.php?title=Build_on_Ubuntu)
 
-For other system, more info can be seen at [sharp Prerequisites](https://github.com/lovell/sharp#prerequisites). Or, if you'd like to build from source, head over to [libvips](https://github.com/jcupitt/libvips)
+The source is available from the [VipsWiki site](http://www.vips.ecs.soton.ac.uk/index.php?title=VIPS).
+
+For other system, more info can be seen at [sharp Prerequisites](https://github.com/lovell/sharp#prerequisites).
 
 ## Installation
 
