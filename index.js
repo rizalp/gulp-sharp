@@ -39,7 +39,7 @@ var getRotate = function( val ){
 var createSharpPipeline = function( opts ) {
   // create pipeline manually to preserve consistency
   var pipeline = [
-    ['resize', opts.resize],
+    (opts.resize) ? ['resize', opts.resize] : undefined,
     (opts.withoutEnlargement) ? ['withoutEnlargement', undefined] : undefined,
     (opts.max) ? ['max', undefined] : undefined,
     (opts.crop) ? ['crop', sharp.gravity[opts.crop] ] : undefined,
@@ -50,7 +50,7 @@ var createSharpPipeline = function( opts ) {
     // rotate is special case, the value will be get with getRotate() function
     // because short-circuiting possible value 0 with undefined (which is get from EXIF) is impossible
     (getRotate(opts.rotate)) ? getRotate(opts.rotate) : undefined,
-
+    (opts.extract) ? ['extract', [opts.extract.topOffset, opts.extract.leftOffset, opts.extract.width, opts.extract.height]] : undefined
     (opts.sharpen) ? ['sharpen', undefined ] : undefined,
     (opts.gamma) ? ['gamma', opts.gamma ] : undefined,
     (opts.grayscale) ? ['grayscale', undefined] : undefined,
@@ -95,9 +95,9 @@ var gulpSharp = function( options ) {
     throw new PluginError(PLUGIN_NAME, 'Missing options object');
   } else if ( ! _.isPlainObject(options) ) {
     throw new PluginError(PLUGIN_NAME, 'options object must be plain object (created with `{}` literal) ');
-  } else if ( options.resize === undefined ) {
-    throw new PluginError(PLUGIN_NAME, 'Please specify resize property in your options object');
-  } else if ( Array.isArray( options.resize ) === false ) {
+  } else if ( options.resize === undefined && options.extract === undefined ) {
+    throw new PluginError(PLUGIN_NAME, 'Please specify an extract or resize property in your options object');
+  } else if ( options.resize && Array.isArray( options.resize ) === false ) {
     throw new PluginError(PLUGIN_NAME, 'options.resize must be array');
   }
 
