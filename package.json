@@ -43,6 +43,6 @@
     "event-stream": "^3.3.*",
     "gulp-util": "^3.0.*",
     "lodash": "^3.9.*",
-    "sharp": "^0.11.*"
+    "sharp": "^0.12.*"
   }
 }
