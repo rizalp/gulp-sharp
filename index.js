@@ -50,7 +50,7 @@ var createSharpPipeline = function( opts ) {
     // rotate is special case, the value will be get with getRotate() function
     // because short-circuiting possible value 0 with undefined (which is get from EXIF) is impossible
     (getRotate(opts.rotate)) ? getRotate(opts.rotate) : undefined,
-    (opts.extract) ? ['extract', [opts.extract.topOffset, opts.extract.leftOffset, opts.extract.width, opts.extract.height]] : undefined
+    (opts.extract) ? ['extract', [opts.extract.topOffset, opts.extract.leftOffset, opts.extract.width, opts.extract.height]] : undefined,
     (opts.sharpen) ? ['sharpen', undefined ] : undefined,
     (opts.gamma) ? ['gamma', opts.gamma ] : undefined,
     (opts.grayscale) ? ['grayscale', undefined] : undefined,
