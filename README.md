@@ -1,6 +1,12 @@
 [gulp](http://gulpjs.com/)-sharp
 =======================================
 
+__This Project Is No Longer Maintained__
+
+Because of other occupation, I can't maintain it anymore. If you find this project usefull, please fork it. Please note that new issues / pr messages will be ignored.
+
+Thanks.
+
 > resize image in your gulp build with [sharp](https://github.com/lovell/sharp)
 
 ## Prerequisites
